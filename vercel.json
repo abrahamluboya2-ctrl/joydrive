@@ -1,7 +1,7 @@
 {
-  "buildCommand": "cd client && pnpm build",
-  "outputDirectory": "client/dist",
-  "devCommand": "cd client && pnpm dev",
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist/public",
+  "devCommand": "pnpm dev",
   "installCommand": "pnpm install",
   "framework": "vite",
   "env": [
