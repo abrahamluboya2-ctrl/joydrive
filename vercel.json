@@ -1,35 +1,13 @@
 {
-  "buildCommand": "pnpm build",
-  "outputDirectory": "dist",
-  "devCommand": "pnpm dev",
+  "buildCommand": "cd client && pnpm build",
+  "outputDirectory": "client/dist",
+  "devCommand": "cd client && pnpm dev",
   "installCommand": "pnpm install",
-  "framework": null,
-  "functions": {
-    "server/_core/index.ts": {
-      "runtime": "nodejs20.x"
-    }
-  },
-  "routes": [
-    {
-      "src": "/api/(.*)",
-      "dest": "/server/_core/index.ts"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/dist/public/index.html"
-    }
-  ],
+  "framework": "vite",
   "env": [
     "VITE_SUPABASE_URL",
     "VITE_SUPABASE_ANON_KEY",
-    "SUPABASE_SERVICE_ROLE_KEY",
-    "DATABASE_URL",
-    "VITE_APP_ID",
-    "VITE_OAUTH_PORTAL_URL",
-    "JWT_SECRET",
-    "OAUTH_SERVER_URL",
-    "NODE_ENV",
-    "PORT"
+    "VITE_APP_ID"
   ],
   "regions": ["iad1"]
 }
