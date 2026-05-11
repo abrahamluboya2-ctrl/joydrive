@@ -365,8 +365,8 @@ const RIDE_TYPES = [
   { 
     id: 'joy_xxl', 
     name: 'Joy XXL', 
-    icon: Truck, 
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663367102035/fx4yy5bytvxiWjowDVwE5a/truck-white-3d-NvvGZusXzsPtF52j23UHgY.webp",
+    icon: Maximize2, 
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663367102035/fx4yy5bytvxiWjowDVwE5a/vehicle-white-3d-Kpxy96JPcGcB9Ery23wrgL.webp",
     vehicleModel: null,
     capacity: 6,
     basePrice: 60,
@@ -381,7 +381,7 @@ const RIDE_TYPES = [
     id: 'joy_parcels', 
     name: 'Joy Send', 
     icon: Package, 
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663367102035/fx4yy5bytvxiWjowDVwE5a/joydrive-box-3d-Bd5DrkcKjMj4wMuaAFeETM.webp",
+    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663367102035/fx4yy5bytvxiWjowDVwE5a/joydrive-box-3d-transparent-TatnwHmJMM7RfDhEregvk3.webp",
     vehicleModel: null,
     capacity: 0,
     basePrice: 10,
@@ -2479,9 +2479,9 @@ export default function App() {
             }, 500); // Reduced from 3000ms
             return 100;
           }
-          return prev + 5; // Faster increment (5% instead of 1%)
+          return prev + 1; // 1% increment
         });
-      }, 30); // 30ms * 20 steps = 600ms total progress + 500ms wait = ~1.1s total duration
+      }, 230); // 230ms * 100 steps = 23000ms = 23 seconds total
       return () => clearInterval(interval);
     }
   }, [appState, user]);
